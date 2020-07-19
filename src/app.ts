@@ -9,6 +9,14 @@ if (typeof userInput === "string") {
   console.log(userInput, "string");
 }
 
+const button = document.querySelector("button")!;
+
+button.addEventListener("click", handleClick.bind(null, 'Heloo'));
+
+function handleClick(message: string) {
+  console.log("clik cuy! " + message);
+}
+
 function generateError(message: string, code: number): never {
   throw { message: message, errorCode: code };
 }
